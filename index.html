@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depositar basura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <h1 class="title" id="tituloBienvenida">Welcome</h1>
+
+    <div class="eyes" id="ojos">
+        <img src="img/ojos.png" alt="ojos">
+        <img src="img/ojos.png" alt="ojos">
+    </div>
+
+    <div class="button">
+        <button class="boton" onclick="mostrarModal()">Start</button>
+    </div>
+
+    <!-- Modal oculto -->
+    <div id="modalMensaje" class="modal">
+        <div class="modal-content">
+            <p>Deseas depositar basura?</p>
+            <div class="conta">
+                <button class="boton" onclick="calcularPeso()">Sí</button>
+                <button class="boton" onclick="mostrarGracias()">No</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mensaje de gracias -->
+    <div id="mensajeGracias" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>¡Gracias!</p>
+            <!-- Botón de regreso -->
+            <button class="boton" onclick="regresarInicio()">Regresar</button>
+        </div>
+    </div>
+
+    <!-- Mensaje de calculando -->
+    <div id="mensajeCalculando" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>Calculando el peso...</p>
+            <div class="progress-bar">
+                <div class="progress" id="barraProgreso"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peso calculado -->
+    <div id="pesoCalculado" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>Peso calculado: 1kg</p>
+            <p>¡Gracias por depositar basura!</p>
+            <img src="img/descuento.png" alt="descuento">
+            <!-- Botón de regreso -->
+            <button class="boton" onclick="regresarInicio()">Regresar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
